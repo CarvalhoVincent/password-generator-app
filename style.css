@@ -72,9 +72,6 @@ body {
     background-color: hsl( var(--clr-veryDarkGrey) );
     min-height: 100vh;
 
-    display: grid;
-    grid-template-rows: min-content 1fr;
-
     overflow-x: hidden;
 }
 
@@ -199,6 +196,14 @@ select {
     margin-inline: 1rem;
 }
 
+@media (min-width: 35em) {
+    .main {
+        max-width: 33.75rem;
+        margin-top: 8.3125rem;
+        margin-inline: auto;
+    }
+}
+
 .title {
     text-align: center;
     margin-block: 0;
@@ -212,13 +217,37 @@ select {
     margin-bottom: 1rem;
 }
 
+@media (min-width: 35em) {
+    .field {
+        padding: 1.5rem 2rem;
+    }
+}
+
+.copy {
+    gap: 1rem;
+    align-items: center;
+}
+
+#copyMsg{
+    display: none;
+} 
+
+.copyIcon:hover {
+    cursor: pointer;
+}
+
 .copyIcon:hover .copyIconPath {
     fill: white;
 }
 
-
 .options {
     padding: 1rem;
+}
+
+@media (min-width: 35em) {
+    .options {
+        padding: 1.5rem 2rem;
+    }
 }
 
 .sliderLabel {
@@ -239,7 +268,7 @@ input[type=range] {
     cursor: pointer;
     height: 8px;
     background-image: linear-gradient(hsl( var(--clr-neonGreen) ), hsl( var(--clr-neonGreen) ));
-    background-size: 50% 100%;
+    background-size: 30% 100%;
     background-repeat: no-repeat;
 }
 
@@ -355,6 +384,7 @@ input[type=range]:hover::-webkit-slider-thumb {
     background-color: hsl( var(--clr-darkGrey) );
     border: 2px solid hsl( var(--clr-neonGreen) );
     color: hsl( var(--clr-neonGreen) );
+    cursor: pointer;
 }
 
 .button svg {
@@ -364,8 +394,6 @@ input[type=range]:hover::-webkit-slider-thumb {
 .button:hover path {
     fill: hsl( var(--clr-neonGreen) );
 }
-
-
 
 /*  Level Classes */
 
