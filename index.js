@@ -47,7 +47,16 @@ const generateBtn = document.getElementById("generateBtn");
 generateBtn.addEventListener("click", generate);
 const fieldText = document.getElementById("fieldText");
 
-function generate(length = 10) {
+function generate(length) {
+    const uppercase = document.getElementById("inclUppercase");
+    const lowercase = document.getElementById("inclLowercase");
+    const numbers = document.getElementById("inclNumber");
+    const symbols = document.getElementById("inclSymbol");
+    const alert = document.getElementById("alert");
+
+    if(uppercase.checked === false && lowercase.checked === false && numbers.checked ===false && symbols.checked === false) {
+        alert.style.display = "block";
+    } else {
     const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
     const numbersChars = "0123456789";
@@ -55,11 +64,6 @@ function generate(length = 10) {
     
     let chars = '';
     var length = slider.value;
-
-    const uppercase = document.getElementById("inclUppercase");
-    const lowercase = document.getElementById("inclLowercase");
-    const numbers = document.getElementById("inclNumber");
-    const symbols = document.getElementById("inclSymbol");
 
     if (uppercase.checked === true) {
         chars += uppercaseChars;
@@ -83,8 +87,10 @@ function generate(length = 10) {
       }
      
     fieldText.innerHTML = password;
-    fieldText.style.color = "hsl( var(--clr-almostWhite) )"
+    fieldText.style.color = "hsl( var(--clr-almostWhite) )";
+    copyMsg.style.display = "none";
+    alert.style.display = "none";
 
     return password;
-
+    };
 }

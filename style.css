@@ -151,6 +151,7 @@ select {
 .text-white { color: hsl( var(--clr-almostWhite) );}
 .text-dark { color: hsl( var(--clr-darkGrey) );}
 .text-green { color: hsl( var(--clr-neonGreen) );}
+.text-red { color: hsl( var(--clr-red) );}
 
 /* typography */
 
@@ -393,6 +394,12 @@ input[type=range]:hover::-webkit-slider-thumb {
 
 .button:hover path {
     fill: hsl( var(--clr-neonGreen) );
+}
+
+.alert {
+    display: none;
+    text-align: center;
+    color: hsl( var(--clr-red) );
 }
 
 /*  Level Classes */

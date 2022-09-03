@@ -45,7 +45,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://carvalhovincent.github.io/password-generator-app/]
 
 ## My process
 
@@ -99,6 +99,10 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 https://nikitahl.com/style-range-input-css 
 it helps me for the range slider, how to fill before the thumb and update it.
+
+
+
+https://openjavascript.info/2022/03/14/random-password-generator-using-javascript/
 
 ## Author
 
