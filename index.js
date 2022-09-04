@@ -1,11 +1,65 @@
 const sliderValue = document.getElementById("sliderValue");
 const slider = document.getElementById("slider");
 const rangeInputs = document.querySelectorAll('input[type="range"]');
+const bar1 = document.getElementById("bar1");
+const bar2 = document.getElementById("bar2");
+const bar3 = document.getElementById("bar3");
+const bar4 = document.getElementById("bar4");
 
 /* slider */
 sliderValue.innerHTML = slider.value;
+bar1.classList.add("weak");
+bar2.classList.add("weak");
+
 slider.oninput = function() {
     sliderValue.innerHTML = this.value;
+
+      /* Strength */
+
+    const levelTxt = document.getElementById("levelTxt");
+
+    if (slider.value < 7) {
+        levelTxt.innerHTML = "too weak!";
+        bar1.classList.remove("tooWeak","weak","medium","strong");
+        bar2.classList.remove("tooWeak","weak","medium","strong");
+        bar3.classList.remove("tooWeak","weak","medium","strong");
+        bar4.classList.remove("tooWeak","weak","medium","strong");
+        bar1.classList.remove("weak");
+        bar1.classList.add("tooWeak");
+    }
+
+    if (slider.value < 9 && slider.value >= 7) {
+        levelTxt.innerHTML = "weak";
+        bar1.classList.remove("tooWeak","weak","medium","strong");
+        bar2.classList.remove("tooWeak","weak","medium","strong");
+        bar3.classList.remove("tooWeak","weak","medium","strong");
+        bar4.classList.remove("tooWeak","weak","medium","strong");
+        bar1.classList.add("weak");
+        bar2.classList.add("weak");
+    }
+
+    if (slider.value < 11 && slider.value >= 9) {
+        levelTxt.innerHTML = "medium";
+        bar1.classList.remove("tooWeak","weak","medium","strong");
+        bar2.classList.remove("tooWeak","weak","medium","strong");
+        bar3.classList.remove("tooWeak","weak","medium","strong");
+        bar4.classList.remove("tooWeak","weak","medium","strong");
+        bar1.classList.add("medium");
+        bar2.classList.add("medium");
+        bar3.classList.add("medium");
+    }
+
+    if (slider.value >= 11) {
+        levelTxt.innerHTML = "strong";
+        bar1.classList.remove("tooWeak","weak","medium","strong");
+        bar2.classList.remove("tooWeak","weak","medium","strong");
+        bar3.classList.remove("tooWeak","weak","medium","strong");
+        bar4.classList.remove("tooWeak","weak","medium","strong");
+        bar1.classList.add("strong");
+        bar2.classList.add("strong");
+        bar3.classList.add("strong");
+        bar4.classList.add("strong");
+    }
 }
 
 function handleInputChange(e) {

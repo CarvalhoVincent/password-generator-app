@@ -378,12 +378,11 @@ input[type=range]:hover::-webkit-slider-thumb {
     width: 100%;
     padding-top: 1.125rem;
     padding-bottom: 1.125rem;
-    border: none;
+    border: 2px solid hsl( var(--clr-neonGreen) );
 }
 
 .button:hover {
     background-color: hsl( var(--clr-darkGrey) );
-    border: 2px solid hsl( var(--clr-neonGreen) );
     color: hsl( var(--clr-neonGreen) );
     cursor: pointer;
 }
@@ -406,16 +405,20 @@ input[type=range]:hover::-webkit-slider-thumb {
 
 .tooWeak {
     background-color: hsl( var(--clr-red) );
+    border: 2px solid hsl( var(--clr-red) );
 }
 
 .weak {
     background-color: hsl( var(--clr-orange) );
+    border: 2px solid hsl( var(--clr-orange) );
 }
 
 .medium {
     background-color: hsl( var(--clr-yellow) );
+    border: 2px solid hsl( var(--clr-yellow) );
 }
 
 .strong {
     background-color: hsl( var(--clr-neonGreen) );
+    border: 2px solid hsl( var(--clr-neonGreen) );
 }
